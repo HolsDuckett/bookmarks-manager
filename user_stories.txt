@@ -1,0 +1,25 @@
+As a user,
+So that I can see my bookmarks,
+I'd like to see a list of bookmarks containing URLs.
+
+Action:
+- show a list 
+
+Noun:
+- bookmarks
+
+Property:
+- URL (owned by bookmark)
+
+Owner:
+- bookmarks
+
+Action and property:
+- show a list -> read the bookmarks_library
+
+Class - Property - Action
+- Bookmark -> URL -> store the URL
+- Library -> Bookmarks -> Display all the bookmarks
+
+
+
