@@ -10,12 +10,12 @@ feature 'Viewing Bookmarks' do
 
     connection = PG.connect(dbname: 'bookmark_manager_test')
 
-    connection.exec("INSERT INTO bookmarks (url) VALUES ('http://www.makersacademy.com');")
-    connection.exec("INSERT INTO bookmarks (url) VALUES ('http://www.google.com');")
+    connection.exec("INSERT INTO bookmarks (url, title) VALUES ('http://www.makersacademy.com', 'Makers Academy');")
+    connection.exec("INSERT INTO bookmarks (url, title) VALUES ('http://www.google.com', 'Google');")
 
     click_button('View Bookmarks')
 
-    expect(page).to have_content('www.google.com')
-    expect(page).to have_content('www.makersacademy.com')
+    expect(page).to have_content('Google')
+    expect(page).to have_content('Makers Academy')
   end
 end
