@@ -14,4 +14,13 @@ describe Bookmarks do
       expect(bookmarks).to include "http://www.google.com"
     end
   end
+
+  describe '.create' do
+    it 'can add bookmarks' do
+      connection = PG.connect(dbname: 'bookmark_manager_test')
+      bookmarks = Bookmarks.create('https://skribbl.io/')
+      bookmarks = Bookmarks.all
+      expect(bookmarks).to include('https://skribbl.io/')
+    end
+  end
 end

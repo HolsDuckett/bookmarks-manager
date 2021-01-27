@@ -6,6 +6,12 @@ As a user,
 So that I can see my bookmarks,
 I'd like to see a list of bookmarks containing URLs.
 ```
+
+```
+As a user,
+So that i can add bookmarks,
+I'd like to be able to add a bookmark.
+```
 <img src="./images/user_story_1.svg">
 
 # Setting up Database
