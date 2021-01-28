@@ -11,10 +11,11 @@ feature 'updating bookmarks' do
 
     visit('/')
     click_button("Update Bookmark")
-    fill_in('Current title', with: 'Skribbl.io')
-    fill_in('New title', with: 'Skribbl.io 2.0')
+    fill_in('current title', with: 'Skribbl.io')
+    fill_in('new title', with: 'Skribbl.io 2.0')
     click_button('Update Bookmark')
     click_button('View Bookmarks')
+    expect(page).to have_content('Skribbl.io 2.0')
   end
 
 end
