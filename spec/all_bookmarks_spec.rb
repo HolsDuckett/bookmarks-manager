@@ -21,4 +21,14 @@ describe Bookmarks do
       expect(bookmarks).to include(["https://skribbl.io/", "Skribbl.io"])
     end
   end
+
+  describe '.delete' do
+    it 'can delete bookmarks' do
+      connection = PG.connect(dbname: 'bookmark_manager_test')
+      bookmarks = Bookmarks.create('https://skribbl.io/', 'Skribbl.io')
+      bookmarks = Bookmarks.delete('https://skribbl.io/', 'Skribbl.io')
+      bookmarks = Bookmarks.all
+      expect(bookmarks).not_to include ["https://skribbl.io/", "Skribbl.io"]
+    end
+  end
 end

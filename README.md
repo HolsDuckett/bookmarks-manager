@@ -11,7 +11,16 @@ I'd like to see a list of bookmarks containing URLs.
 As a user,
 So that i can add bookmarks,
 I'd like to be able to add a bookmark.
+
 ```
+
+```
+As a user,
+So that i can delete bookmarks,
+I'd like to be able to delete a bookmark.
+
+```
+
 <img src="./images/user_story_1.svg">
 
 # Setting up Database
