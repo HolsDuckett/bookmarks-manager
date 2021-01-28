@@ -21,6 +21,20 @@ I'd like to be able to delete a bookmark.
 
 ```
 
+```
+As a user,
+So that i can change my bookmarks,
+I'd' like to be able to update a bookmark.
+
+```
+
+
+╔════════════╗       .update        ╔════════════╗  UPDATE bookmarks SET title = '#{title}' WHERE title = '#{title}'╔════════════╗
+║            ║--------------------->║            ║--------------------------------------------------------->        ║            ║
+║ Controller ║ [array of bookmarks] ║  Bookmark  ║                           {result object}                        ║  Database  ║
+║            ║<---------------------║            ║<-----------------------------------------------------------------║            ║
+╚════════════╝                      ╚════════════╝                                                                  ╚════════════╝
+
 <img src="./images/user_story_1.svg">
 
 # Setting up Database

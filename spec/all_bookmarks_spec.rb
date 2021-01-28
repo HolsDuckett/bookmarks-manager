@@ -31,4 +31,17 @@ describe Bookmarks do
       expect(bookmarks).not_to include ["https://skribbl.io/", "Skribbl.io"]
     end
   end
+
+  describe '.update' do
+    it 'can update bookmarks' do
+      connection = PG.connect(dbname: 'bookmark_manager_test')
+      bookmarks = Bookmarks.create('https://skribbl.io/', 'Skribbl.io')
+      bookmarks = Bookmarks.update('Skribbl.io', 'Skribbl.io 2.0')
+      bookmarks = Bookmarks.all
+      expect(bookmarks).to include ['https://skribbl.io/', 'Skribbl.io 2.0']
+      expect(bookmarks).not_to include ['https://skribbl.io/',"Skribbl.io"]
+    end
+  end
+
+
 end
