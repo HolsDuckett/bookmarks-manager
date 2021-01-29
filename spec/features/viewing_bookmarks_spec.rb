@@ -2,7 +2,7 @@
 feature 'Viewing Bookmarks' do
   scenario 'visiting the index page' do
     visit('/')
-    expect(page).to have_content("This is a bookmark")
+    expect(page).to have_content("This is a bookmark manager app")
   end
 
   scenario 'clicking view bookmarks button' do
